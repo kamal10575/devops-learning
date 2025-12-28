@@ -15,3 +15,14 @@ jobs:
 
       - name: Run sample command
         run: echo "CI pipeline running successfully"
+
+steps:
+  - name: Checkout code
+    uses: actions/checkout@v4
+
+  - name: Give execute permission
+    run: chmod +x deploy.sh
+
+  - name: Run deployment script
+    run: ./deploy.sh
+
